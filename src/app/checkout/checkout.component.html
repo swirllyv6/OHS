@@ -1,36 +1,139 @@
 <div class="container-fluid">
-    <div class="card mt-2 mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-3 col-md-4 m-auto">
-                <img src="https://i.pinimg.com/originals/10/52/ce/1052cedc818d44eb7d6084aebc9cd85d.jpg" class="img-fluid" alt="...">
-            </div>
-            <div class="col-9 col-md-8">
-                <div class="card-body">
-                    <h4 class="card-title">Titles</h4>
-                    <p class="card-text">Rs. 999</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+    <ul class="list-group mt-2 mb-2">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-4 pl-0">
+                    <img src="https://i.pinimg.com/originals/10/52/ce/1052cedc818d44eb7d6084aebc9cd85d.jpg" class="img-fluid">
+                </div>
+                <div class="col-6 pl-0">
+                    <h3 class="mb-0">Classic Service</h3>
+                    <h3 class="mb-0">Rs. 999</h3>
+                    <h3 class="mb-0"></h3>
+                </div>
+                <div class="col-2 pl-0 m-auto text-right">
+                    <span matRipple>X</span>
                 </div>
             </div>
-        </div>
-    </div>
-	
-    <textarea class="form-control mb-2" id="exampleFormControlTextarea1" rows="3" placeholder="Add Service Instructions"></textarea>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-4 pl-0">
+                    <img src="https://i.pinimg.com/originals/10/52/ce/1052cedc818d44eb7d6084aebc9cd85d.jpg" class="img-fluid">
+                </div>
+                <div class="col-6 pl-0">
+                    <h3 class="mb-0">Classic Service</h3>
+                    <h3 class="mb-0">Rs. 999</h3>
+                    <h3 class="mb-0"></h3>
+                </div>
+                <div class="col-2 pl-0 m-auto text-right">
+                    <span matRipple>X</span>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-4 pl-0">
+                    <img src="https://i.pinimg.com/originals/10/52/ce/1052cedc818d44eb7d6084aebc9cd85d.jpg" class="img-fluid">
+                </div>
+                <div class="col-6 pl-0">
+                    <h3 class="mb-0">Classic Service</h3>
+                    <h3 class="mb-0">Rs. 999</h3>
+                    <h3 class="mb-0 text-danger">Quantity ></h3>
+                </div>
+                <div class="col-2 pl-0 m-auto text-right">
+                    <span matRipple>X</span>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item p-1">
+            <textarea class="form-control mb-2" id="instruction" rows="2" placeholder="Add Service Instructions(optional)"></textarea>
+        </li>
+    </ul>
 
-    <mat-card matRipple class="mb-2">
+
+
+    <mat-card matRipple class="mb-2 text-danger">
         Add Other Services ->
     </mat-card>
 
-    <mat-card matRipple class="mb-2">
+    <mat-card matRipple class="mb-2 text-danger">
         Apply Coupon ->
     </mat-card>
 
-    <ul class="list-group">
+    <ul class="list-group mb-2">
         <li class="list-group-item">
             <h1 class="m-0">Bill Detail</h1>
         </li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
-        <li class="list-group-item">Porta ac consectetur ac</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6">
+                    Total
+                </div>
+                <div class="col-6 text-right">
+                    Rs.10,000
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h3>You Pay</h3>
+                </div>
+                <div class="col-6 text-right">
+                    <h3>Rs.10,000</h3>
+                </div>
+            </div>
+        </li>
     </ul>
+    <section id="dateTime">
+        <h2>Select Date</h2>
+        <div class="">
+            <table class="category-top table table-responsive">
+                <td *ngFor="let date of dateTime">
+                    <div class="date">
+                        <h3>{{ date.date }}</h3>
+                        <h3>Wed</h3>
+                    </div>
+                </td>
+            </table>
+        </div>
+        <h2>Select Time Slot</h2>
+        <div class="row">
+            <div class="col-4">
+                <div class="time">
+                    <h3>10</h3>
+                    <h3>AM</h3>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="time">
+                    <h3>11</h3>
+                    <h3>AM</h3>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="time">
+                    <h3>12</h3>
+                    <h3>PM</h3>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="time">
+                    <h3>1</h3>
+                    <h3>PM</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="footer">
+    <div class="row p-1">
+        <div class="col-8 text-dark">
+            <h2 class="m-0 ml-3">Rs. 10,000</h2>
+            <p class="m-0 ml-3">View Details</p>
+        </div>
+        <div class="col-4 text-right m-auto">
+            <button class="text-white text-bold" mat-raised-button color="orange">NEXT -></button>
+        </div>
+    </div>
 </div>

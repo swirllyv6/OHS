@@ -1,0 +1,53 @@
+
+  
+.category-top {
+    margin-top: 15px;
+    border: 0px;
+}
+
+.category-top td {
+    white-space: nowrap;
+    padding: 5px;
+    border: 0px;
+}
+
+.category-top td .category {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+.category-top td .active {
+    background-color:black;
+    color: white;
+}
+
+.category-top td .category:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.category-top::-webkit-scrollbar {
+    display: none;
+}
+
+.category{
+    background-color: black;color: white;
+}
+
+
+h3{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 20px;
+}

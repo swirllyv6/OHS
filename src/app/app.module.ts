@@ -20,6 +20,8 @@ import { DentingPaintingComponent } from './Services/denting-painting/denting-pa
 import { InsuranceServicesComponent } from './Services/insurance-services/insurance-services.component';
 import { ScheduleServicesComponent } from './Services/schedule-services/schedule-services.component';
 import { TyresWheelsCareComponent } from './Services/tyres-wheels-care/tyres-wheels-care.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ServiceHeaderComponent } from './Services/service-header/service-header.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { TyresWheelsCareComponent } from './Services/tyres-wheels-care/tyres-whe
     DentingPaintingComponent,
     InsuranceServicesComponent,
     ScheduleServicesComponent,
-    TyresWheelsCareComponent
+    TyresWheelsCareComponent,
+    ProfileComponent,
+    ServiceHeaderComponent
   ],
   imports: [
     BrowserModule,

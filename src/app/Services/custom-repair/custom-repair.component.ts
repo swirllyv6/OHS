@@ -1,32 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomRepairService } from '../custom-repair.service';
 
 @Component({
   selector: 'app-custom-repair',
   templateUrl: './custom-repair.component.html',
-  styleUrls: ['./custom-repair.component.css']
+  styleUrls: ['./custom-repair.component.css'],
+  providers:[CustomRepairService]
 })
 export class CustomRepairComponent implements OnInit {
 
-  serviceData1 = [
-    {
-      title:"Service 1",
-      price:999,
-      description:"This is service 1",
-      garage:"Garage 1"
-    }
-  ];
+  serviceData: {title:string , price:number , description:string , garage:string}[] = [];
 
-  serviceData2 = [
-    {
-      title:"Service 2",
-      price:999,
-      description:"This is service 2",
-      garage:"Garage 2"
-    }
-  ];
-  constructor() { }
-
+  constructor(private customRepair:CustomRepairService) {
+   }
+ 
   ngOnInit(): void {
+    this.serviceData = this.customRepair.serviceData;
   }
 
 }

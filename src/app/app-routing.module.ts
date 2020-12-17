@@ -4,6 +4,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProfileComponent } from './profile/profile.component';
 import { AcRepairComponent } from './Services/ac-repair/ac-repair.component';
 import { BatteryComponent } from './Services/battery/battery.component';
 import { CleaningDetailingComponent } from './Services/cleaning-detailing/cleaning-detailing.component';
@@ -16,6 +17,7 @@ import { TyresWheelsCareComponent } from './Services/tyres-wheels-care/tyres-whe
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent},
+  { path: 'profile', component: ProfileComponent},
   { path: 'checkout', component: CheckoutComponent},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent},

@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
-    <ul class="list-group mt-2 mb-2">
-        <li class="list-group-item">
+    <ul class="list-group mt-4 mb-2">
+        <li class="list-group-item mb-2" style="background-color: lightblue;" >
             <div class="row">
                 <div class="col-4 pl-0">
                     <img src="https://i.pinimg.com/originals/10/52/ce/1052cedc818d44eb7d6084aebc9cd85d.jpg" class="img-fluid">
@@ -12,11 +12,15 @@
                     <h3 class="mb-0"></h3>
                 </div>
                 <div class="col-2 pl-0 m-auto text-right">
-                    <span matRipple>X</span>
+                    <span matRipple>
+                        <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                            <mat-icon>delete</mat-icon>
+                          </button>
+                    </span>
                 </div>
             </div>
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item mt-2 mb-2" style="background-color: lightblue;">
             <div class="row">
                 <div class="col-4 pl-0">
                     <img src="https://i.pinimg.com/originals/10/52/ce/1052cedc818d44eb7d6084aebc9cd85d.jpg" class="img-fluid">
@@ -27,11 +31,15 @@
                     <h3 class="mb-0"></h3>
                 </div>
                 <div class="col-2 pl-0 m-auto text-right">
-                    <span matRipple>X</span>
+                    <span matRipple>
+                        <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                            <mat-icon>delete</mat-icon>
+                          </button>
+                    </span>
                 </div>
             </div>
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item mt-2 mb-2" style="background-color: lightblue;">
             <div class="row">
                 <div class="col-4 pl-0">
                     <img src="https://i.pinimg.com/originals/10/52/ce/1052cedc818d44eb7d6084aebc9cd85d.jpg" class="img-fluid">
@@ -39,14 +47,18 @@
                 <div class="col-6 pl-0">
                     <h3 class="mb-0">Classic Service</h3>
                     <h3 class="mb-0">Rs. 999</h3>
-                    <h3 class="mb-0 text-danger">Quantity ></h3>
+                    <h3 class="mb-0 text-danger mt-5"> <button mat-raised-button color="accent">Quantity &darr;</button> </h3>
                 </div>
                 <div class="col-2 pl-0 m-auto text-right">
-                    <span matRipple>X</span>
+                    <span matRipple>
+                        <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                            <mat-icon>delete</mat-icon>
+                          </button>
+                    </span>
                 </div>
             </div>
         </li>
-        <li class="list-group-item p-1">
+        <li class="list-group-item p-1 mt-2" style="background-color: whitesmoke;">
             <textarea class="form-control mb-2" id="instruction" rows="2" placeholder="Add Service Instructions(optional)"></textarea>
         </li>
     </ul>
@@ -54,11 +66,11 @@
 
 
     <mat-card matRipple class="mb-2 text-danger">
-        Add Other Services ->
+        <button mat-button color="warn">Add Other &rarr;</button>
     </mat-card>
 
     <mat-card matRipple class="mb-2 text-danger">
-        Apply Coupon ->
+        <button mat-button color="warn">Apply Coupon &rarr;</button>
     </mat-card>
 
     <ul class="list-group mb-2">
@@ -124,16 +136,19 @@
             </div>
         </div>
     </section>
+  
+
 </div>
 
-<div id="footer">
+
     <div class="row p-1">
         <div class="col-8 text-dark">
             <h2 class="m-0 ml-3">Rs. 10,000</h2>
             <p class="m-0 ml-3">View Details</p>
         </div>
         <div class="col-4 text-right m-auto">
-            <button class="text-white text-bold" mat-raised-button color="orange">NEXT -></button>
+            <button class="text-white text-bold" mat-raised-button color="orange">NEXT  &rarr;</button>
         </div>
     </div>
-</div>
+
+

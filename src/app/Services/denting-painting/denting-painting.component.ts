@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DentingPaintingService } from '../denting-painting.service';
 
 @Component({
   selector: 'app-denting-painting',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DentingPaintingComponent implements OnInit {
 
-  constructor() { }
+  serviceData: {title:string , price:number , description:string , garage:string}[] = [];
 
+  constructor(private dentingService:DentingPaintingService) {
+   }
+ 
   ngOnInit(): void {
+    this.serviceData = this.dentingService.serviceData;
   }
-
 }

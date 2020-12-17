@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScheduleServicesService } from '../schedule-services.service';
 
 @Component({
   selector: 'app-schedule-services',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScheduleServicesComponent implements OnInit {
 
-  constructor() { }
+  serviceData: {title:string , price:number , description:string , garage:string}[] = [];
 
+  constructor(private scheduleService:ScheduleServicesService) {
+   }
+ 
   ngOnInit(): void {
+    this.serviceData = this.scheduleService.serviceData;
   }
 
 }

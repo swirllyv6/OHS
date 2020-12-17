@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InsuranceServicesService } from '../insurance-services.service';
 
 @Component({
   selector: 'app-insurance-services',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InsuranceServicesComponent implements OnInit {
 
-  constructor() { }
+  serviceData: {title:string , price:number , description:string , garage:string}[] = [];
 
+  constructor(private insuraceService:InsuranceServicesService) {
+   }
+ 
   ngOnInit(): void {
+    this.serviceData = this.insuraceService.serviceData;
   }
 
 }

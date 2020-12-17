@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { CheckoutComponent } from './checkout/checkout.component';
@@ -16,19 +17,19 @@ import { TyresWheelsCareComponent } from './Services/tyres-wheels-care/tyres-whe
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent},
-  { path: 'profile', component: ProfileComponent},
-  { path: 'checkout', component: CheckoutComponent},
+  { path: 'dashboard', canActivate: [AuthGuard], component: DashboardComponent},
+  { path: 'profile', canActivate: [AuthGuard], component: ProfileComponent},
+  { path: 'checkout', canActivate: [AuthGuard], component: CheckoutComponent},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent},
-  { path: 'customRepair', component: CustomRepairComponent},
-  { path: 'acRepair', component: AcRepairComponent},
-  { path: 'battery', component: BatteryComponent},
-  { path: 'cleaningDetailing', component: CleaningDetailingComponent},
-  { path: 'dentingPainting', component: DentingPaintingComponent},
-  { path: 'insuranceServices', component: InsuranceServicesComponent},
-  { path: 'scheduleService', component: ScheduleServicesComponent},
-  { path: 'tyreWheel', component: TyresWheelsCareComponent},
+  { path: 'customRepair', canActivate: [AuthGuard], component: CustomRepairComponent},
+  { path: 'acRepair', canActivate: [AuthGuard], component: AcRepairComponent},
+  { path: 'battery', canActivate: [AuthGuard], component: BatteryComponent},
+  { path: 'cleaningDetailing', canActivate: [AuthGuard], component: CleaningDetailingComponent},
+  { path: 'dentingPainting', canActivate: [AuthGuard], component: DentingPaintingComponent},
+  { path: 'insuranceServices', canActivate: [AuthGuard], component: InsuranceServicesComponent},
+  { path: 'scheduleService',canActivate: [AuthGuard],  component: ScheduleServicesComponent},
+  { path: 'tyreWheel', canActivate: [AuthGuard], component: TyresWheelsCareComponent},
   {path:'**' , redirectTo:'dashboard'}
   
  

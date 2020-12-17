@@ -13,9 +13,7 @@
                 </div>
                 <div class="col-2 pl-0 m-auto text-right">
                     <span matRipple>
-                        <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
-                            <mat-icon>delete</mat-icon>
-                          </button>
+                        <button mat-button color="warn" style="font-size: 30px;">&times;</button>
                     </span>
                 </div>
             </div>
@@ -32,9 +30,7 @@
                 </div>
                 <div class="col-2 pl-0 m-auto text-right">
                     <span matRipple>
-                        <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
-                            <mat-icon>delete</mat-icon>
-                          </button>
+                        <button mat-button color="warn" style="font-size: 30px;">&times;</button>
                     </span>
                 </div>
             </div>
@@ -47,15 +43,25 @@
                 <div class="col-6 pl-0">
                     <h3 class="mb-0">Classic Service</h3>
                     <h3 class="mb-0">Rs. 999</h3>
-                    <h3 class="mb-0 text-danger mt-5"> <button mat-raised-button color="accent">Quantity &darr;</button> </h3>
+                    <!-- <h3 class="mb-0 text-danger mt-5"> <button mat-raised-button color="accent">Quantity &darr;</button> </h3> -->
+                     
+                    
                 </div>
                 <div class="col-2 pl-0 m-auto text-right">
                     <span matRipple>
-                        <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
-                            <mat-icon>delete</mat-icon>
-                          </button>
+                        <button mat-button color="warn" style="font-size: 30px;">&times;</button>
                     </span>
                 </div>
+                <mat-form-field appearance="fill" class="mt-5" style="margin-left: 80px;">
+                    <mat-label>Quantity</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="1">1</mat-option>
+                      <mat-option value="2">2</mat-option>
+                      <mat-option value="3">3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+               
             </div>
         </li>
         <li class="list-group-item p-1 mt-2" style="background-color: whitesmoke;">
@@ -66,14 +72,14 @@
 
 
     <mat-card matRipple class="mb-2 text-danger">
-        <button mat-button color="warn">Add Other &rarr;</button>
+        <button mat-button color="warn">Add Other Service &rarr;</button>
     </mat-card>
 
     <mat-card matRipple class="mb-2 text-danger">
         <button mat-button color="warn">Apply Coupon &rarr;</button>
     </mat-card>
 
-    <ul class="list-group mb-2">
+    <ul class="list-group mb-2" >
         <li class="list-group-item">
             <h1 class="m-0">Bill Detail</h1>
         </li>
@@ -131,6 +137,18 @@
             <div class="col-4">
                 <div class="time">
                     <h3>1</h3>
+                    <h3>PM</h3>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="time">
+                    <h3>2</h3>
+                    <h3>PM</h3>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="time">
+                    <h3>3</h3>
                     <h3>PM</h3>
                 </div>
             </div>

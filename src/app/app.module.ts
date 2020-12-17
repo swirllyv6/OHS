@@ -22,6 +22,8 @@ import { ScheduleServicesComponent } from './Services/schedule-services/schedule
 import { TyresWheelsCareComponent } from './Services/tyres-wheels-care/tyres-wheels-care.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ServiceHeaderComponent } from './Services/service-header/service-header.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,7 @@ import { ServiceHeaderComponent } from './Services/service-header/service-header
     MaterialModule,
     IvyCarouselModule
   ],
-  providers: [],
+  providers: [AuthService , AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

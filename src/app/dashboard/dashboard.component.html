@@ -1,37 +1,99 @@
 <div class="container-fluid">
 
-    <carousel class="mt-2 mb-2" [images]="images" [cellWidth]="'100%'" [arrows]="false" [dots]="true" [autoplay]="true" [autoplayInterval]="1000" [pauseOnHover]="true" [borderRadius]="10">
-    </carousel>
+    <div id="carouselExampleIndicators" class="carousel slide mt-3" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100"
+              src="https://i.pinimg.com/originals/10/52/ce/1052cedc818d44eb7d6084aebc9cd85d.jpg"
+              alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100"
+              src="https://i.pinimg.com/originals/51/9b/2b/519b2b6479d29e86d896c250a017fe86.jpg"
+              alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100"
+              src="https://blog.getpitstop.com/wp-content/uploads/2020/03/car-service-in-Gurgaon.jpg"
+              alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://nmotion2015.com/wp-content/uploads/2019/03/car-oil.jpg"
+              alt="Fourth slide">
+          </div>
+        </div>
 
-    <mat-card>
+      </div>
+
+    <mat-card style="background-color: white;">
         <div class="row">
             <div matRipple matRippleColor="" class="col-4 col-sm-4">
-                <img src="../../assets/services/customRepair.svg">
+                <a routerLink="/customRepair">
+                    <img src="../../assets/services/customRepair.svg">
+                    <p>Custom Repair</p>
+                </a>
+
             </div>
             <div matRipple matRippleColor="" class="col-4 col-sm-4">
-                <img src="../../assets/services/dentingPainting.svg">
+                <a routerLink="/dentingPainting">
+                    <img src="../../assets/services/dentingPainting.svg">
+                    <p>Denting Painting</p>
+                </a>
             </div>
             <div matRipple matRippleColor="" class="col-4 col-sm-4">
-                <img src="../../assets/services/insuranceServices.svg">
+                <a routerLink="/insuranceServices">
+                    <img src="../../assets/services/insuranceServices.svg">
+                    <p>Insurance Services</p>
+                </a>
+
             </div>
             <div matRipple matRippleColor="" class="col-4 col-sm-4">
-                <img src="../../assets/services/cleaningDetailing.svg">
+                <a routerLink="/cleaningDetailing">
+                    <img src="../../assets/services/cleaningDetailing.svg">
+                    <p>Cleaning & Detailing</p>
+                </a>
+
             </div>
             <div matRipple matRippleColor="" class="col-4 col-sm-4">
-                <img src="../../assets/services/wheelRimCare.svg">
+                <a routerLink="/tyreWheel">
+                    <img src="../../assets/services/wheelRimCare.svg">
+                    <p>Tyres & Wheel Care</p>
+                </a>
+
+
             </div>
             <div matRipple matRippleColor="" class="col-4 col-sm-4">
-                <img src="../../assets/services/battery.svg">
+                <a routerLink="/battery">
+                    <img src="../../assets/services/battery.svg">
+                    <p class="ml-4">Battery</p>
+                </a>
+
             </div>
-            <div matRipple matRippleColor="" class="col-4 col-sm-4">
-                <img src="../../assets/services/carAcRepair.svg">
+            <div matRipple matRippleColor="" class="col-4 col-sm-4 ml-5">
+                <a routerLink="/acRepair">
+                    <img src="../../assets/services/carAcRepair.svg">
+                    <p>Car Ac Repair</p>
+                </a>
+
             </div>
-            <div matRipple matRippleColor="" class="col-4 col-sm-4">
-                <img src="../../assets/services/scheduledServices.svg">
+            <div matRipple matRippleColor="" class="col-4 col-sm-4 ml-4">
+                <a routerLink="/scheduleService">
+                    <img src="../../assets/services/scheduledServices.svg">
+                    <p>Scheduled Services</p>
+                </a>
+
             </div>
             <div matRipple matRippleColor="" class="col col-sm">
 
             </div>
         </div>
     </mat-card>
+
+
 </div>

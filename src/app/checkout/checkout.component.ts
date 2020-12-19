@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ServiceDailogComponent } from '../service-dailog/service-dailog.component';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+interface serviceForm {
+  title:string , price:number , description:string , garage:string
+}
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -45,11 +49,22 @@ export class CheckoutComponent implements OnInit {
     }
   ];
   
-
+  otherService = [{}];
 
  
-  constructor() { }
+  constructor(public dialog: MatDialog) { console.log(this.otherService);}
+  openDialog(): void {
+    const dialogRef = this.dialog.open(ServiceDailogComponent, {
+      width: '1000px'
+    });
 
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+          this.otherService = result;
+    }
+     
+    );
+  }
   ngOnInit(): void {
   }
 

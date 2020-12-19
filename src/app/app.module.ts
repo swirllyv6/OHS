@@ -24,6 +24,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { ServiceHeaderComponent } from './Services/service-header/service-header.component';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
+import { ServiceDailogComponent } from './service-dailog/service-dailog.component';
+
+
 
 @NgModule({
   declarations: [
@@ -43,7 +46,9 @@ import { AuthGuard } from './auth.guard';
     ScheduleServicesComponent,
     TyresWheelsCareComponent,
     ProfileComponent,
-    ServiceHeaderComponent
+    ServiceHeaderComponent,
+    ServiceDailogComponent,
+   
   ],
   imports: [
     BrowserModule,

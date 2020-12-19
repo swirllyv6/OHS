@@ -11,17 +11,41 @@ interface serviceForm {
 })
 export class CheckoutComponent implements OnInit {
   
+  selectedServices = [
+    {
+      name:"Service1",
+      price:999,
+      description:"this is service 1",
+      garage:"Garage1",
+      serviceImg:"https://i.pinimg.com/originals/10/52/ce/1052cedc818d44eb7d6084aebc9cd85d.jpg" 
+    },
+    {
+      name:"Service2",
+      price:999,
+      description:"this is service 2",
+      garage:"Garage2",
+      serviceImg:"https://i.pinimg.com/originals/10/52/ce/1052cedc818d44eb7d6084aebc9cd85d.jpg" 
+    },
+    {
+      name:"Service3",
+      price:999,
+      description:"this is service 3",
+      garage:"Garage3",
+      serviceImg:"https://i.pinimg.com/originals/10/52/ce/1052cedc818d44eb7d6084aebc9cd85d.jpg" 
+    }
+  ]
+
   dateTime = [
     {
       date: 16,
-      day: 'Wed',
+      day: 'Mon',
       time: [
         10, 11, 12, 1, 2, 3, 4, 5
       ]
     },
     {
       date: 17,
-      day: 'Wed',
+      day: 'Tue',
       time: [
         10, 11, 12, 1, 2, 3, 4, 5
       ]
@@ -35,24 +59,24 @@ export class CheckoutComponent implements OnInit {
     },
     {
       date: 19,
-      day: 'Wed',
+      day: 'Thus',
       time: [
         10, 11, 12, 1, 2, 3, 4, 5
       ]
     },
     {
       date: 20,
-      day: 'Wed',
+      day: 'Fri',
       time: [
         10, 11, 12, 1, 2, 3, 4, 5
       ]
     }
   ];
   
-  otherService = [{}];
+ 
 
  
-  constructor(public dialog: MatDialog) { console.log(this.otherService);}
+  constructor(public dialog: MatDialog) { }
   openDialog(): void {
     const dialogRef = this.dialog.open(ServiceDailogComponent, {
       width: '1000px'
@@ -60,11 +84,16 @@ export class CheckoutComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
-          this.otherService = result;
+          this.selectedServices.push(...result);
     }
      
     );
   }
+
+  deleteService(index:number){
+    this.selectedServices.splice(index , 1);
+  }
+
   ngOnInit(): void {
   }
 

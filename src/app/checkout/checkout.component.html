@@ -1,5 +1,5 @@
 <div class="container-fluid">
-
+{{otherService}}
     <ul class="list-group mt-4 mb-2">
         <li class="list-group-item mb-2" style="background-color: lightblue;" >
             <div class="row">
@@ -72,7 +72,7 @@
 
 
     <mat-card matRipple class="mb-2 text-danger">
-        <button mat-button color="warn">Add Other Service &rarr;</button>
+        <button mat-button color="warn" (click)="openDialog()">Add Other Service &rarr;</button>
     </mat-card>
 
     <mat-card matRipple class="mb-2 text-danger">

@@ -1,0 +1,11 @@
+<app-service-loader *ngIf="isLoading; else services"></app-service-loader>
+<ng-template #services>
+    <!-- Container -->
+    <div class="container-fluid pl-2 pr-2">
+        <!-- Mat Accordian -->
+        <mat-accordion>
+            <!-- Mat Card -->
+            <app-service-card *ngFor="let service of serviceData" [service]="service"></app-service-card>
+        </mat-accordion>
+    </div>
+</ng-template>

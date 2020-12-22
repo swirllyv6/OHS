@@ -1,46 +1,27 @@
-<body class="register-page sidebar-collapse">
-    <!--LOGIN FORM-->
-     <div class="section profile-content">
-       <div class="container">
-         <div class="owner">
-           <div class="filter"></div>
-       <div class="container">
-         <div class="row">
-           <div class="col-lg-4 ml-auto mr-auto">
-             <img src="../../assets/logo.png" alt="Circle Image" class="img-circle img-no-padding img-responsive mb-5" style="max-width: 150px;display: block;margin-left: auto;margin-right: auto;">
-               
-                   <form id="login-form" class="">
-                 
-                     <div class="form-group">
-                         <label>Email/Mobile</label>
-                         <input type="text" class="form-control" required name="emailmobile" placeholder="Email/Mobile">
-                     </div>
-                     <div class="form-group">
-                         <label>Password</label>
-                         <input type="password" class="form-control" required name="password" placeholder="Password">
-                     </div>
-                     <button type="submit" id="login-btn" class="btn btn-success btn-block btn-round" name="login" style="border-radius: 50px;">Login</button>
-                     
-                   </form><br>
-                   <a mat-button color="primary" style="color: red;margin-left: 100px;">Forget Password</a>
-                   <div id="errorMsg"></div>
-                   <div class="forgot">
-                     <a mat-button color="primary" style="color: green;" class="ml-5">Not Yet Registered, Register Here!</a>
-                   </div>
-               
-             </div>
-           </div>
-         </div>
-       </div>
-         </div>
-         
-       
-         
-         
-         
-       </div>
- 
-       
-   </body>
-   
- 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 ml-auto mr-auto mt-2">
+            <img src="../../assets/logo.png" alt="Circle Image" class="img-circle img-no-padding img-responsive mb-5" style="max-width: 150px;display: block;margin-left: auto;margin-right: auto;">
+
+            <form id="login-form" class="" ngForm="loginForm" (ngSubmit)="login()">
+
+                <div class="form-group">
+                    <label>Email/Mobile</label>
+                    <input type="text" class="form-control" required name="emailmobile" placeholder="Email/Mobile">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" required name="password" placeholder="Password">
+                </div>
+                <button mat-stroked-button class="btn-block" style="color: rgba(29, 209, 161,1)">Login</button>
+
+            </form><br>
+            <button mat-button color="warn">Forget Password</button>
+            <div id="errorMsg"></div>
+            <div class="forgot">
+                <button mat-button style="color: rgba(29, 209, 161,1)">Not Yet Registered, Register Here!</button>
+            </div>
+
+        </div>
+    </div>
+</div>

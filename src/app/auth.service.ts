@@ -8,19 +8,16 @@ export class AuthService {
 
   loggedIn = false;
 
-  isAuthenticated() {
-    const promise = new Promise(
-      (resolve, reject) => {
-        setTimeout(() => {
-          resolve(this.loggedIn);
-        }, 1000);
-      }
-    );
-    return promise;
+  checkAuth() {
+    if( localStorage.getItem('token') != null)
+      return true
+    else
+      return false
   }
 
   login() {
-    this.loggedIn = true;
+    localStorage.setItem('token', 'qwertyuiopqwertyuiop')
+    return true
   }
 
   logout() {

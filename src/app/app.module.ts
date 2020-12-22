@@ -12,19 +12,24 @@ import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { CustomRepairComponent } from './Services/custom-repair/custom-repair.component';
-import { AcRepairComponent } from './Services/ac-repair/ac-repair.component';
-import { BatteryComponent } from './Services/battery/battery.component';
-import { CleaningDetailingComponent } from './Services/cleaning-detailing/cleaning-detailing.component';
-import { DentingPaintingComponent } from './Services/denting-painting/denting-painting.component';
-import { InsuranceServicesComponent } from './Services/insurance-services/insurance-services.component';
-import { ScheduleServicesComponent } from './Services/schedule-services/schedule-services.component';
-import { TyresWheelsCareComponent } from './Services/tyres-wheels-care/tyres-wheels-care.component';
+
 import { ProfileComponent } from './profile/profile.component';
-import { ServiceHeaderComponent } from './Services/service-header/service-header.component';
+
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
-import { ServiceDailogComponent } from './service-dailog/service-dailog.component';
+
+import { ServicesComponent } from './services/services.component';
+import { ServiceHeaderComponent } from './services/service-header/service-header.component';
+
+
+import { ServiceLoaderComponent } from './services/service-loader/service-loader.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { AllServicesComponent } from './services/all-services/all-services.component';
+import { ServiceCardComponent } from './services/service-card/service-card.component';
+import { ServiceDialogComponent } from "./services/service-dialog/service-dialog.component";
+import { DateTimeComponent } from './checkout/date-time/date-time.component';
+
+
 
 
 
@@ -37,17 +42,14 @@ import { ServiceDailogComponent } from './service-dailog/service-dailog.componen
     HeaderComponent,
     FooterComponent,
     CheckoutComponent,
-    CustomRepairComponent,
-    AcRepairComponent,
-    BatteryComponent,
-    CleaningDetailingComponent,
-    DentingPaintingComponent,
-    InsuranceServicesComponent,
-    ScheduleServicesComponent,
-    TyresWheelsCareComponent,
     ProfileComponent,
     ServiceHeaderComponent,
-    ServiceDailogComponent,
+    ServicesComponent,
+    ServiceLoaderComponent,
+    AllServicesComponent,
+    ServiceCardComponent,
+    ServiceDialogComponent,
+    DateTimeComponent
    
   ],
   imports: [
@@ -55,7 +57,8 @@ import { ServiceDailogComponent } from './service-dailog/service-dailog.componen
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    NgxSkeletonLoaderModule.forRoot()
   ],
   providers: [AuthService , AuthGuard],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
-<mat-card matRipple class="mb-1" [routerLink]="[ '/servicedetail/', service.id, service.garageID]">
+<mat-card matRipple class="mb-1">
 
     <!-- Div row -->
-    <div class="row">
+    <div class="row" [routerLink]="[ '/servicedetail/', service.id, service.garageID]">
         <!-- Col-4 -->
         <div class="col-3 col-sm-3 m-auto">
             <img src="../../../assets/services/carAcRepair.svg" class="img-fluid">

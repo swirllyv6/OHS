@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 
 import { AllServicesComponent } from './services/all-services/all-services.component';
+import { ServiceDetailComponent } from './services/service-detail/service-detail.component';
 
 import { ServicesComponent } from './services/services.component';
 
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: 'service/:service', component: AllServicesComponent, canActivateChild: [AuthGuard]},
     ]
   },
+  { path: 'servicedetail/:serviceId/:garageId', component: ServiceDetailComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent},
   {path:'**' , redirectTo:'dashboard'}

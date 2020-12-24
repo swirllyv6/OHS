@@ -28,6 +28,7 @@ import { AllServicesComponent } from './services/all-services/all-services.compo
 import { ServiceCardComponent } from './services/service-card/service-card.component';
 import { ServiceDialogComponent } from "./services/service-dialog/service-dialog.component";
 import { DateTimeComponent } from './checkout/date-time/date-time.component';
+import { ServiceDetailComponent } from './services/service-detail/service-detail.component';
 
 
 
@@ -49,7 +50,8 @@ import { DateTimeComponent } from './checkout/date-time/date-time.component';
     AllServicesComponent,
     ServiceCardComponent,
     ServiceDialogComponent,
-    DateTimeComponent
+    DateTimeComponent,
+    ServiceDetailComponent
    
   ],
   imports: [

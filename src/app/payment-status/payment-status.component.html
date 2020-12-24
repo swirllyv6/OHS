@@ -1,0 +1,111 @@
+
+<app-payment-loader *ngIf="isLoading; else services"></app-payment-loader>
+<ng-template #services>
+<body style="background-color: #f1f2f6;">
+    <div class="container mt-2">
+
+
+        <mat-card>
+            <div class="container-fluid">
+            <div class="row">
+                <div class="col-8 pl-0" *ngIf="paymentStatus">
+                 <h1>Payment successful</h1>
+                 <h2>Rs.999</h2>
+
+                </div>
+                <div class="col-8 pl-0" *ngIf="!paymentStatus">
+                    <h1>Payment failed</h1>
+                    <h2>Rs.999</h2>
+   
+                   </div>
+                <div class="col-4 pl-0 m-auto text-right">
+                    <span matRipple>
+                        <button mat-fab style="background-color: green;" *ngIf="paymentStatus">
+                            <mat-icon>check</mat-icon>
+                          </button>
+                          <span matRipple *ngIf="!paymentStatus">
+                            <button mat-button color="warn" style="font-size: 100px;">&times;</button>
+                        </span>
+                          
+                    </span>
+                </div>
+            </div>
+            </div>
+
+        </mat-card>
+
+
+
+
+        <mat-card class="mb-2  mt-2">
+            <h3 style="font-weight: 500;">Booking ID:</h3>
+            <h3 style="font-weight: 600;">#OHS78678868</h3>
+             <h4 style="font-weight: 400;" *ngIf="paymentStatus">Your transaction has been successfully processed and service detail and timing will be notifiy you via email.</h4>
+             <h4 style="font-weight: 400;" *ngIf="!paymentStatus">Your transaction failed.</h4>
+             <button mat-stroked-button style="color:  rgba(29, 209, 161,1);" routerLink="/dashboard">Add another service</button>
+        </mat-card>
+
+        <mat-card class="mb-5">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <h1>Order Detail:</h1>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-6" style="font-weight: 600;">
+                        Service Name: 
+                    </div>
+                    <div class="col-6 text-right">
+                        Service 1
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6" style="font-weight: 600;">
+                        Service Type: 
+                    </div>
+                    <div class="col-6 text-right">
+                        AC Repair
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="font-weight: 600;">
+                        Garage : 
+                    </div>
+                    <div class="col-8 text-right">
+                        Garage 1
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4" style="font-weight: 600;">
+                        Time : 
+                    </div>
+                    <div class="col-8 text-right">
+                        21:45 PM
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="font-weight: 600;">
+                        Date : 
+                    </div>
+                    <div class="col-8 text-right">
+                        24-12-2020
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="font-weight: 600;">
+                        Address : 
+                    </div>
+                    <div class="col-8 text-right">
+                        <address>Ward No.1, Old Town, Butibori, Nagpur, Maharastra, India</address>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </mat-card>
+<br><br><br>
+    </div>
+
+</body>
+</ng-template>

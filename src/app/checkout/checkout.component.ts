@@ -20,6 +20,7 @@ export class CheckoutComponent implements OnInit {
   serviceId:any;
   garageId:any;
   selectedServices:any = []
+  panelOpenState = false;
 
   constructor(private _bottomSheet: MatBottomSheet, public _location: Location, private _service: ServicesService, public activateRoute: ActivatedRoute, public dialog: MatDialog) { }
   openDialog(): void {
@@ -31,7 +32,7 @@ export class CheckoutComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
+     
           this.selectedServices.push(...result);
     }
      

@@ -1,0 +1,61 @@
+
+<app-service-loader *ngIf="isLoading; else services"></app-service-loader>
+<ng-template #services>
+    <body style="background-color: #f1f2f6;">
+
+        <div class="container">
+            <mat-card class="card" *ngFor="let service of selectedServices;let i = index">
+              
+                <div class="container-fliud">
+                    <div class="wrapper row">
+                        <div class="preview col-md-6">
+    
+                            <div class="preview-pic tab-content">
+                                <div class="tab-pane active" id="pic-1"><img src="../../../assets/services/carAcRepair.svg" width="150px" height="150px" /></div>
+                                <div class="tab-pane" id="pic-2"><img src="../../../assets/services/carAcRepair.svg"  width="150px" height="150px"/></div>
+                                <div class="tab-pane" id="pic-3"><img src="../../../assets/services/carAcRepair.svg"  width="150px" height="150px"/></div>
+                                <div class="tab-pane" id="pic-4"><img src="../../../assets/services/carAcRepair.svg"  width="150px" height="150px"/></div>
+                                <div class="tab-pane" id="pic-5"><img src="../../../assets/services/carAcRepair.svg"  width="150px" height="150px"/></div>
+                            </div>
+                            <ul class="preview-thumbnail nav nav-tabs">
+                                <li class="active"><a data-target="#pic-1" data-toggle="tab"><img
+                                            src="../../../assets/services/carAcRepair.svg" /></a></li>
+                                <li><a data-target="#pic-2" data-toggle="tab"><img
+                                            src="../../../assets/services/carAcRepair.svg" /></a></li>
+                                <li><a data-target="#pic-3" data-toggle="tab"><img
+                                            src="../../../assets/services/carAcRepair.svg" /></a></li>
+                                <li><a data-target="#pic-4" data-toggle="tab"><img
+                                            src="../../../assets/services/carAcRepair.svg" /></a></li>
+                                <li><a data-target="#pic-5" data-toggle="tab"><img
+                                            src="../../../assets/services/carAcRepair.svg" /></a></li>
+                            </ul>
+    
+                        </div>
+                        <div class="details col-md-6">
+                            <h3 class="product-title">{{service.title}}</h3>
+                            <div class="rating">
+                                <div class="stars" >
+                                    <span class="fa fa-star checked" style="color:rgba(29, 209, 161,1);"></span>
+                                    <span class="fa fa-star checked"style="color:rgba(29, 209, 161,1);"></span>
+                                    <span class="fa fa-star checked"style="color:rgba(29, 209, 161,1);"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="review-no">41 reviews</span>
+                            </div>
+                            <p class="product-description">{{service.description}}.</p>
+                            <h4 class="price">current price: <span style="color:rgba(29, 209, 161,1);">Rs.{{service.price}}</span></h4>
+                            <h4 class="price">garage: <span style="color:rgba(29, 209, 161,1);">{{service.garage}}</span></h4>
+                            <p class="vote"><strong>91%</strong> of buyers enjoyed this service! <strong>(87 votes)</strong>
+                            </p>
+                            <div class="action mt-2" style="margin-left: 100px;">
+                                <button class=" btn btn-default " type="button" style="background-color: rgba(29, 209, 161,1);background-image: linear-gradient(to right, #10ac84 , #00d2d3);color: white;" [routerLink]="[ '/checkout/', serviceId, garageId]">Add</button>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </body>
+</ng-template>

@@ -13,13 +13,13 @@
                     <label>Password</label>
                     <input type="password" class="form-control" required name="password" placeholder="Password">
                 </div>
-                <button mat-stroked-button class="btn-block" style="color: rgba(29, 209, 161,1)">Login</button>
+                <button type="submit" id="login-btn" class="btn btn-success btn-block btn-round" name="login" style="border-radius: 50px;">Login</button>
 
             </form><br>
-            <button mat-button color="warn">Forget Password</button>
+            <a mat-button color="primary" style="color: red;margin-left: 100px;">Forget Password</a>
             <div id="errorMsg"></div>
             <div class="forgot">
-                <button mat-button style="color: rgba(29, 209, 161,1)">Not Yet Registered, Register Here!</button>
+              <a mat-button color="primary" style="color: green;" class="ml-5">Not Yet Registered, Register Here!</a>
             </div>
 
         </div>

@@ -5,6 +5,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 import { PaymentStatusComponent } from './payment-status/payment-status.component';
 import { ProfileComponent } from './profile/profile.component';
 
@@ -26,6 +27,7 @@ const routes: Routes = [
     ]
   },
   { path: 'servicedetail/:serviceId/:garageId', component: ServiceDetailComponent },
+  { path: 'orderhistory', component: OrderHistoryComponent },
   { path: 'paymentstatus', component: PaymentStatusComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent},

@@ -33,6 +33,7 @@ import { ServiceDetailLoaderComponent } from './services/service-detail-loader/s
 import { PaymentStatusComponent } from './payment-status/payment-status.component';
 import { ServiceDailogLoaderComponent } from './services/service-dailog-loader/service-dailog-loader.component';
 import { PaymentLoaderComponent } from './payment-loader/payment-loader.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 
 
@@ -59,7 +60,8 @@ import { PaymentLoaderComponent } from './payment-loader/payment-loader.componen
     ServiceDetailLoaderComponent,
     PaymentStatusComponent,
     ServiceDailogLoaderComponent,
-    PaymentLoaderComponent
+    PaymentLoaderComponent,
+    OrderHistoryComponent
    
   ],
   imports: [

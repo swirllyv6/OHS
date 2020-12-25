@@ -29,6 +29,11 @@ import { ServiceCardComponent } from './services/service-card/service-card.compo
 import { ServiceDialogComponent } from "./services/service-dialog/service-dialog.component";
 import { DateTimeComponent } from './checkout/date-time/date-time.component';
 import { ServiceDetailComponent } from './services/service-detail/service-detail.component';
+import { ServiceDetailLoaderComponent } from './services/service-detail-loader/service-detail-loader.component';
+import { PaymentStatusComponent } from './payment-status/payment-status.component';
+import { ServiceDailogLoaderComponent } from './services/service-dailog-loader/service-dailog-loader.component';
+import { PaymentLoaderComponent } from './payment-loader/payment-loader.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 
 
@@ -51,7 +56,12 @@ import { ServiceDetailComponent } from './services/service-detail/service-detail
     ServiceCardComponent,
     ServiceDialogComponent,
     DateTimeComponent,
-    ServiceDetailComponent
+    ServiceDetailComponent,
+    ServiceDetailLoaderComponent,
+    PaymentStatusComponent,
+    ServiceDailogLoaderComponent,
+    PaymentLoaderComponent,
+    OrderHistoryComponent
    
   ],
   imports: [

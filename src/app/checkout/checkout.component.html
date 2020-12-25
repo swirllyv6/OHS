@@ -1,16 +1,18 @@
 <body style="background-color: #f1f2f6;">
-<div class="container mt-3">
+<div class="container mt-2">
+
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let service of selectedServices;let i = index">
+        <mat-card class="mt-2">
+        <li class="list-group-item mb-2"  style="border: 1px solid  lightgray;" *ngFor="let service of selectedServices;let i = index">
             <div class="row">
                 <div class="col-4 pl-0 m-auto">
                     <img src="../../../assets/services/carAcRepair.svg" class="img-fluid">
                 </div>
                 <div class="col-6 pl-0">
-                    <h3 class="mb-0">{{service.name}}</h3>
+                    <h3 class="mb-0">{{service.title}}</h3>
                     <h3 class="mb-0">Rs.{{service.price}}</h3>
                     <h3 class="mb-0">{{service.garage}}</h3>
-                    <h3 class="mb-0">{{service.description}}</h3>
+
                 </div>
                 <div class="col-2 pl-0 m-auto text-right">
                     <span matRipple>
@@ -19,7 +21,8 @@
                 </div>
             </div>
         </li>
-        <li class="list-group-item p-1 mt-2">
+    </mat-card>
+        <li class="list-group-item p-1 mt-2 mb-2">
             <textarea class="form-control mb-2" id="instruction" rows="2" placeholder="Add Service Instructions(optional)"></textarea>
         </li>
     </ul>
@@ -27,14 +30,14 @@
 
 
     <mat-card matRipple class="mb-2 text-danger">
-        <button mat-raised-button (click)="openDialog()" style="background-color: rgba(29, 209, 161,1);background-image: linear-gradient(to right, #10ac84 , #00d2d3);margin-left: 90px;;">Add Other Service &rarr;</button>
+        <button mat-raised-button (click)="openDialog()" style="background-color: rgba(29, 209, 161,1);margin-left: 90px;color: white;">Add Other Service &rarr;</button>
     </mat-card>
 
     <mat-card matRipple class="mb-2 text-danger">
-        <button mat-raised-button style="background-color: rgba(29, 209, 161,1);background-image: linear-gradient(to right, #10ac84 , #00d2d3);margin-left: 100px;;">Apply Coupon &rarr;</button>
+        <button mat-raised-button style="background-color: rgba(29, 209, 161,1);margin-left: 100px;color: white;">Apply Coupon &rarr;</button>
     </mat-card>
 
-    <ul class="list-group mb-2">
+    <ul class="list-group">
         <li class="list-group-item">
             <h1 class="m-0">Bill Detail</h1>
         </li>
@@ -58,7 +61,6 @@
         </li>
     </ul>
 
-    <hr>
 
 
 </div>
@@ -72,7 +74,7 @@
 
     </div>
     <div class="col-4 text-right m-auto">
-        <button class="text-dark text-bold" mat-raised-button style="background-color: rgba(29, 209, 161,1);background-image: linear-gradient(to right, #10ac84 , #00d2d3);" (click)="selectDateTime()">NEXT  &rarr;</button>
+        <button class="text-dark text-bold" mat-raised-button style="background-color: rgba(29, 209, 161,1);" (click)="selectDateTime()"><span style="color:white;" routerLink="/paymentstatus">NEXT  &rarr;</span></button>
     </div>
 </div>
 </body>

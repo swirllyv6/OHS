@@ -1,18 +1,17 @@
-<app-service-loader *ngIf="isLoading; else service"></app-service-loader>
+<app-service-dailog-loader *ngIf="isLoading; else service"></app-service-dailog-loader>
 <ng-template #service>
-    <h1 mat-dialog-title>Add Other Service</h1>
     <div mat-dialog-content>
         <ul class="list-group mt-4 mb-2" *ngFor="let service of services;let i = index">
-            <li class="list-group-item mb-2" style="background-color:#dfe4ea;">
+            <li class="list-group-item mb-2" style="background-color:#f1f2f6;;">
                 <div class="row">
                     <div class="col-4 pl-0">
-                        <img src={{service.serviceImg}} class="img-fluid mt-4">
+                        <img src="../../../assets/services/carAcRepair.svg" class="img-fluid mt-2">
                     </div>
                     <div class="col-6 pl-0">
-                        <h3 class="mb-0">{{service.name}}</h3>
+                        <h3 class="mb-0">{{service.title}}</h3>
                         <h3 class="mb-0">Rs.{{service.price}}</h3>
                         <h3 class="mb-0">{{service.garage}}</h3>
-                        <h3 class="mb-0">{{service.description}}</h3>
+                        <!-- <h3 class="mb-0">{{service.description}}</h3> -->
                     </div>
                     <div class="col-2 pl-0 m-auto text-right">
                         <section class="example-section">
@@ -21,11 +20,11 @@
                         </section>
                     </div>
                 </div>
-            </li>
+            </li>   
         </ul>
     </div>
     <div mat-dialog-actions align="end">
         <button mat-raised-button color="warn" (click)="close()">cancel</button>
-        <button mat-raised-button style="background-color: rgba(29, 209, 161,1);background-image: linear-gradient(to right, #10ac84 , #00d2d3);" cdkFocusInitial (click)="add()">Add</button>
+        <button mat-raised-button style="background-color: rgba(29, 209, 161,1);" cdkFocusInitial (click)="add()">Add</button>
     </div>
 </ng-template>

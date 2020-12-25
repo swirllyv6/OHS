@@ -4,12 +4,12 @@
                
               
                 
-                <div class="container">
+                <div class="container" style="background-color: #f1f2f6;">
                     <div class="row">
                         <div class="col-lg-6 ml-auto mr-auto">
-                            <img src="../../assets/logo.png" alt="Circle Image" class="img-circle img-no-padding img-responsive mb-2" style="max-width: 150px;display: block;margin-left: auto;margin-right: auto;">
+                            <img src="../../assets/logo.png" alt="Circle Image" class="img-circle img-no-padding img-responsive mb-2 mt-2" style="max-width: 100px;display: block;margin-left: auto;margin-right: auto;">
 
-                            <mat-card style="background-color: rgba(29, 209, 161,0.6);" class="mb-2" *ngFor="let user of userData">
+                            <mat-card  class="mb-2" *ngFor="let user of userData">
                                 <h3 style="color: black;font-weight: bold;font-size: large;text-align: center;" class="title mx-auto"><b>Profile</b></h3>
 
                                 <div class="alert alert-success" style="display: none" id="update"></div>
@@ -25,8 +25,8 @@
                                 <label style="color: black;font-weight: bold" class="mt-2">Email</label>
                                 <input type="email" value="{{user.email}}" class="form-control" name="email" readonly="true">
                                 <button style="display: none" id="save" class="btn btn-warning btn-block">SAVE</button>
-                                <button id="edit" onclick="edit();" class="btn btn-success btn-block btn-round" name="login" style="border-radius: 50px;">EDIT</button>
-
+                                <!-- <button id="edit" onclick="edit();" class="btn btn-success btn-block btn-round" name="login">EDIT</button> -->
+                                <button mat-stroked-button  class="btn btn-block btn-round" style="background-color: rgba(29, 209, 161,1);color: white;">Edit</button>
                             </mat-card>
                         </div>
                     </div>

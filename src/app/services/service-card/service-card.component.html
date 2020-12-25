@@ -9,20 +9,19 @@
         <!-- col-7 -->
         <div class="col-6 col-sm-6">
             <h3>{{service.title}}</h3>
-            <h3>{{service.price}}</h3>
+            <h3>Rs.{{service.price}}</h3>
             <h3>{{service.garage}}</h3>
 
         </div>
         <div class="col-3 col-sm-3">
-            <button mat-stroked-button color="primary" aria-label="Example icon button with a delete icon" class="mb-2" [routerLink]="[ '/checkout/', service.id, service.garageID]">
-            Add
-          </button>
+        
+          <button class=" btn btn-default " type="button" style="background-color: rgba(29, 209, 161,1);color: white;" [routerLink]="[ '/checkout/', service.id, service.garageID]">Add</button>
         </div>
     </div>
     <mat-card-footer>
         <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
-                <mat-panel-title>
+                <mat-panel-title style="color: rgba(29, 209, 161,1);">
                     {{ panelOpenState? 'Hide': 'View'}} Detail
                 </mat-panel-title>
             </mat-expansion-panel-header>
